@@ -1,0 +1,10 @@
+binaries/Cortex Command x64.exe
+binaries/CortexCommand
+
+appimage/*
+!appimage/stub.AppImageBuilder.yml
+!cccc.png
+
+*.zip
+
+c4-deployment-tool
