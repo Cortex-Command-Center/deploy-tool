@@ -1,4 +1,4 @@
-import wazubaba.karoscript
+import karoscript
 import os
 import term
 
