@@ -20,6 +20,12 @@ names so:
 If one is missing that step will be skipped. If both are missing the tool
 will complain.
 
+You also require two separate programs installed:
+- zip
+- appimage-builder
+
+They are used by c4-deploy-tool.
+
 After those are in, and you ensure you set `deploy_option.ini`'s `datapath`
 to where your c4 data dir is, along with setting version to what you want,
 just run `c4-deployment-tool`.
