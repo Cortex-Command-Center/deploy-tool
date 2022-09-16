@@ -1,4 +1,4 @@
-binaries/Cortex Command x64.exe
+binaries/*.exe
 binaries/CortexCommand
 
 appimage/*

@@ -10,8 +10,10 @@ const(
 	winlibs = os.join_path(binaries, 'winlibs')
 	linlibs = os.join_path(binaries, 'linlibs')
 	winbinname = 'Cortex Command x64.exe'
+	oldwinbinname = 'Cortex Command x86.exe'
 	linbinname = 'CortexCommand'
 	windows = os.join_path(binaries, winbinname)
+	oldwindows = os.join_path(binaries, oldwinbinname)
 	linux = os.join_path(binaries, linbinname)
 	lindeploy = 'C4-VERSION-lin64'
 	windeploy = 'C4-VERSION-win64'
