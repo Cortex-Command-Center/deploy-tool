@@ -17,12 +17,18 @@ names so:
 - linux: `CortexCommand`
 - windows: `Cortex Command x64.exe`
 
+To get these compile the engine.
+
 If one is missing that step will be skipped. If both are missing the tool
 will complain.
 
-You also require two separate programs installed:
+You also require these separate programs installed:
 - zip
 - appimage-builder
+- zsync
+
+Needed when generating recipe:
+- patchelf
 
 They are used by c4-deploy-tool.
 

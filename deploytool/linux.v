@@ -19,12 +19,18 @@ fn build_app_image(opts BuildOpts) ?
 	generate_appimage_yaml(opts) ?
 
 	bindir := os.join_path('AppDir', 'usr', 'bin')
-	outname := os.join_path(bindir, linbinname)
+  icon_dir := os.join_path('AppDir', 'usr', 'share', 'icons') 
+	lib_dir := os.join_path('AppDir', 'usr', 'lib') 
+  outname := os.join_path(bindir, linbinname)
 
 	print(term.green('\tInstalling linux executable for appimage generation... '))
 	os.mkdir_all(bindir, os.MkdirParams{}) ?
+	os.mkdir_all(icon_dir, os.MkdirParams{}) ?
+	os.mkdir_all(lib_dir, os.MkdirParams{}) ?
 	os.cp(os.join_path('..', linux), outname) ?
-	os.cp('cortexcommand.desktop', os.join_path('AppDir', 'cortexcommand.desktop')) ?
+	os.cp(os.join_path('..', 'binaries', 'linlibs', 'libfmod.so.12'), os.join_path(lib_dir, 'libfmod.so.12')) ?
+  os.cp('cccc.png', os.join_path(icon_dir, 'cccc.png')) ?
+  //	os.cp('cortexcommand.desktop', os.join_path('AppDir', 'cortexcommand.desktop')) ?
 	println('DONE!')
 
 	
@@ -39,7 +45,7 @@ fn build_app_image(opts BuildOpts) ?
 
 	print(term.green('\tCleaning up... '))
 	os.rmdir_all('AppDir') ?
-	os.rmdir_all('appimage-builder-cache') ?
+	//os.rmdir_all('appimage-builder-cache') ?
 	os.rm('AppImageBuilder.yml') ?
 	println('DONE!')
 	os.chdir('..') ?
