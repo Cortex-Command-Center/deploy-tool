@@ -6,13 +6,12 @@ AppDir:
   app_info:
     id: cortexcommand
     name: C4
-    icon: icons
+    icon: cccc
     version: '%VERSION'
     exec: usr/bin/CortexCommand
     exec_args: $@
   files:
-    include:
-      - $APPDIR/../binaries/linlibs/libfmod.so.12
+    include:     
       - /usr/lib64/liballeg.so.4.4
       - /usr/lib64/libloadpng.so.4.4
       - /usr/lib64/libminizip.so.1
