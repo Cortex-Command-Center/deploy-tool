@@ -35,7 +35,7 @@ fn main()
 	fp.skip_executable()
 
 
-	opts.ddir = fp.string('data', `d`, opts.ddir, 'Path to the cortex command data repo.').to_lower()
+	opts.ddir = fp.string('data', `d`, opts.ddir, 'Path to the cortex command data repo.')
 	opts.version = fp.string('version', `v`, opts.version, 'Version tag for the deployed archives.').to_lower()
 	opts.linux = fp.bool('linux', `l`, opts.linux, 'Should a linux release be generated?')
 	opts.windows = fp.bool('windows', `w`, opts.windows, 'Should a windows release be generated?')
