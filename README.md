@@ -45,3 +45,8 @@ Also I have no clue why the hell `-prod` is broken but tbf V is still indev.
 
 
 Tl;dr: `./build_deploy.sh`
+
+
+# Thanks section
+People who have helped fix my braindamaged script:
+- Sydiepus
